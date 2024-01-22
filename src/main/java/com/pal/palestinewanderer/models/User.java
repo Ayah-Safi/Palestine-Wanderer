@@ -17,6 +17,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -26,21 +27,28 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Size(min = 3, message = "Username must be greater than 3 characters")
-	private String username;
-	
+
+	@Size(min = 3, message = "First name must be greater than 3 characters")
+	private String fname;
+
+	@Size(min = 3, message = "Last name must be greater than 3 characters")
+	private String lname;
+
+	@Email(message = "Email should be valid")
+	@Column(nullable = false, unique = true)
+	private String email;
+
 	@Size(min = 5, message = "Password must be greater than 5 characters")
 	private String password;
-	
+
 	@Transient
 	private String passwordConfirmation;
 	@Column(updatable = false)
-	
+
 	private Date createdAt;
-	
+
 	private Date updatedAt;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private List<Role> roles;
@@ -55,6 +63,10 @@ public class User {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "users_activities", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "activity_id"))
 	private List<Activity> bookedActivities;
+	
+	public User() {
+	}
+
 
 	public List<Activity> getActivities() {
 		return activities;
@@ -72,9 +84,7 @@ public class User {
 		this.feedback = feedback;
 	}
 
-	public User() {
-	}
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -82,15 +92,31 @@ public class User {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getUsername() {
-		return username;
+	public String getFname() {
+		return fname;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
 
+	public String getLname() {
+		return lname;
+	}
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
 	public String getPassword() {
 		return password;
 	}
@@ -129,6 +155,14 @@ public class User {
 
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
+	}
+	
+	public List<Activity> getBookedActivities() {
+		return bookedActivities;
+	}
+
+	public void setBookedActivities(List<Activity> bookedActivities) {
+		this.bookedActivities = bookedActivities;
 	}
 
 	@PrePersist

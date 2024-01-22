@@ -7,5 +7,6 @@ import com.pal.palestinewanderer.models.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-    User findByUsername(String username);
+    User findByFname(String username);
+	User findByEmail(String email);
 }
