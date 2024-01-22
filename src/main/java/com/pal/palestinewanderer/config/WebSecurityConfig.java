@@ -35,7 +35,7 @@ public class WebSecurityConfig {
 	            .requestMatchers(
 //	                new MvcRequestMatcher(introspector, "/home/addFeedback"),
 	                new MvcRequestMatcher(introspector, "/home/addFav"),
-	                new MvcRequestMatcher(introspector, "/home/bookActivity"),
+//	                new MvcRequestMatcher(introspector, "/home/bookActivity"),
 	                new MvcRequestMatcher(introspector, "/home/feedbackThankYou"),
 	                new MvcRequestMatcher(introspector, "/home/activityThankYou")
 	            )
