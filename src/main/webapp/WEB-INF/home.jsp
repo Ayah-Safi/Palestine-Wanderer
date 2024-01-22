@@ -107,7 +107,7 @@
 													the central West Bank, serving as the administrative
 													capital of the Palestinian Authority.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -124,7 +124,7 @@
 													Palestinian city in the northern West Bank, characterized
 													by its historical and cultural significance.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -141,7 +141,7 @@
 													northern West Bank, recognized for its agricultural
 													importance and historical heritage.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -164,7 +164,7 @@
 													agricultural activities and as an essential urban center in
 													the region.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -182,7 +182,7 @@
 													significance and the presence of the Tomb of the
 													Patriarchs/Ibrahimi Mosque.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -200,7 +200,7 @@
 													the birthplace of Jesus Christ and for the historic
 													Nativity Church.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -223,7 +223,7 @@
 													cities in the world, and known for its archaeological
 													sites.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -240,7 +240,7 @@
 													the West Bank, known for its distinctive location within
 													the separation barrier and its agricultural significance.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
@@ -258,7 +258,7 @@
 													and proximity to historic sites like the ancient village of
 													Salfit.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn city-btn-color">Read More</a>
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
 													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
