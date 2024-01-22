@@ -562,7 +562,7 @@
 									<td>Login</td>
 								</tr>
 								<tr>
-									<td>Add Feedback</td>
+									<td><a href="/home/addFeedback">Add FeedBack</a></td>
 								</tr>
 								<tr>
 									<td>Book an Activity</td>
