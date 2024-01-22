@@ -52,7 +52,7 @@
 				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
 				<li class="nav-item"><a class="nav-link" href="#our-journey"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
 				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
-				<li class="nav-item orng-button"><a class="nav-link" href="#" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
+				<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
 			</ul>
 		</div>
 	</nav>
