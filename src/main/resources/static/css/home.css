@@ -53,6 +53,11 @@ body {
 .orng-color {
 	background-color: #fc8b5e;
 	border: 1px solid #fc8b5e;
+	color: white;
+	
+}
+.btn btn-warning{
+	color:white !important;
 }
 .city-btn-color {
 	background-color: #fc8b5e;
@@ -107,6 +112,7 @@ body {
 
 .play-vid:hover {
 	text-decoration: underline;
+	
 }
 
 .card {
@@ -203,7 +209,17 @@ td {
 .heart:hover i {
 	color:#fc8b5e;
 }
+.btn-primary:hover {
+    color: white !important;
+    background-color: #f6c100 !important;
+    border-color: #f6c100 !important;
+}
+
 
 table tbody, table td, table tfoot, table th, table thead, table tr {
     border-color: black !important;
+}
+a{
+color:black;
+text-decoration: none;
 }

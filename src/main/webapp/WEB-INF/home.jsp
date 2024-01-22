@@ -82,10 +82,10 @@
 					<h3 class="mb-3">Explore Palestinian Cities</h3>
 				</div>
 				<div class="col-6 text-right">
-					<a class="btn btn-primary mb-3 mr-1 orng-color"
+					<a class="btn btn-warning  mb-3 mr-1 orng-color"
 						href="#carouselExampleIndicators2" role="button"
 						data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-					</a> <a class="btn btn-primary mb-3 orng-color"
+					</a> <a class="btn btn-warning  mb-3 orng-color"
 						href="#carouselExampleIndicators2" role="button"
 						data-bs-slide="next"> <i class="fa fa-arrow-right"></i>
 					</a>
@@ -283,10 +283,10 @@
 					<h3 class="mb-3">Experience Activities</h3>
 				</div>
 				<div class="col-6 text-right">
-					<a class="btn btn-primary mb-3 mr-1 orng-color"
+					<a class="btn btn-warning mb-3 mr-1 orng-color"
 						href="#carouselExampleIndicators3" role="button"
 						data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-					</a> <a class="btn btn-primary mb-3 orng-color"
+					</a> <a class="btn btn-warning mb-3 orng-color"
 						href="#carouselExampleIndicators3" role="button"
 						data-bs-slide="next"> <i class="fa fa-arrow-right"></i>
 					</a>
@@ -440,10 +440,10 @@
 					<h3 class="mb-3">Discover Palestinian Culture</h3>
 				</div>
 				<div class="col-6 text-right">
-					<a class="btn btn-primary mb-3 mr-1 orng-color"
+					<a class="btn btn-warning mb-3 mr-1 orng-color"
 						href="#carouselExampleIndicators4" role="button"
 						data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-					</a> <a class="btn btn-primary mb-3 orng-color"
+					</a> <a class="btn btn-warning mb-3 orng-color"
 						href="#carouselExampleIndicators4" role="button"
 						data-bs-slide="next"> <i class="fa fa-arrow-right"></i>
 					</a>
