@@ -585,7 +585,7 @@
 									<td><a href="/home/addFeedback">Add FeedBack</a></td>
 								</tr>
 								<tr>
-									<td>Book an Activity</td>
+									<td><a href="/home/bookActivity">Book an Activity</a></td>
 								</tr>
 							</tbody>
 						</table>
