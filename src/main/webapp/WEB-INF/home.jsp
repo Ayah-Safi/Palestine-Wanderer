@@ -106,8 +106,9 @@
 												<p class="card-text">Ramallah is a Palestinian city in
 													the central West Bank, serving as the administrative
 													capital of the Palestinian Authority.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -122,8 +123,9 @@
 												<p class="card-text">Nablus, also known as Nablus, is a
 													Palestinian city in the northern West Bank, characterized
 													by its historical and cultural significance.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -138,8 +140,9 @@
 												<p class="card-text">Jenin is a Palestinian city in the
 													northern West Bank, recognized for its agricultural
 													importance and historical heritage.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -160,8 +163,9 @@
 													located in the northern West Bank, known for its
 													agricultural activities and as an essential urban center in
 													the region.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -177,8 +181,9 @@
 													southern part of the West Bank, known for its religious
 													significance and the presence of the Tomb of the
 													Patriarchs/Ibrahimi Mosque.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -194,8 +199,9 @@
 													the West Bank, renowned for its biblical significance as
 													the birthplace of Jesus Christ and for the historic
 													Nativity Church.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -216,8 +222,9 @@
 													the West Bank, considered one of the oldest inhabited
 													cities in the world, and known for its archaeological
 													sites.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -232,8 +239,9 @@
 												<p class="card-text">Qalqilya is a Palestinian city in
 													the West Bank, known for its distinctive location within
 													the separation barrier and its agricultural significance.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -249,8 +257,9 @@
 													central West Bank, notable for its agricultural activities
 													and proximity to historic sites like the ancient village of
 													Salfit.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -300,9 +309,10 @@
 													appreciation for diverse customs and daily life in this
 													intimate cultural exchange.</p>
 
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -317,9 +327,10 @@
 													tradition, fosters eco-sustainability, and connects us to
 													cultural significance. Embrace this practice to cultivate a
 													meaningful connection with nature and the past.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -338,9 +349,10 @@
 													treasures independently, absorbing the history and vibrancy
 													of the city at your leisure.</p>
 
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -360,9 +372,10 @@
 													history and diverse experiences, creating lasting memories
 													on this unique adventure.</p>
 
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -379,9 +392,10 @@
 													the untouched beauty of nature. Experience the tranquility
 													of winding trails, breathtaking views, and the harmony of
 													the natural world on this immersive hiking journey.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 
@@ -398,9 +412,10 @@
 													by spending a day with a Palestinian family. Enhance your
 													appreciation for diverse customs and daily life in this
 													intimate cultural exchange</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -449,9 +464,10 @@
 													tapestry of flavors, blending traditional Middle Eastern
 													ingredients to create dishes like falafel, hummus, and
 													maqluba, reflecting the region's diverse culinary heritage.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 
@@ -467,9 +483,10 @@
 													cultural symphony, weaving traditional melodies and
 													contemporary influences, capturing the essence of
 													resilience and identity.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
+														<a><i class="far fa-heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -484,9 +501,11 @@
 													vibrant heritage, featuring intricate embroidery and
 													symbolic patterns that convey a deep connection to
 													tradition and identity.</p>
-												<div class="d-grid gap-2">
+												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
+														<a><i class="far fa-heart"></i></a>
+														
 												</div>
 											</div>
 										</div>

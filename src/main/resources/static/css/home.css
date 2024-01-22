@@ -188,4 +188,11 @@ td {
 	
 }
  
- 
+.card-btm {
+	display:flex;
+	justify-content:space-between;
+}
+
+.card-btm:hover {
+	color:#fc8b5e;
+}
