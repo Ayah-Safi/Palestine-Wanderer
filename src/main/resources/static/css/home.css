@@ -166,7 +166,7 @@ td {
 	 padding:0px;
  }
  
- .nav-item{
+.nav-item{
  	display:flex;
  }
  
@@ -176,7 +176,7 @@ td {
  	border-bottom: 2px solid #fc8b5e;
  }
  
- .orng-button {
+.orng-button {
  	background-color: #fc8b5e;
 	border: 1px solid #fc8b5e;
 	border-radius: 7%;
