@@ -40,17 +40,17 @@
 <body>
 	<nav class="navbar navbar-expand-lg  sticky-top">
 		<div class="logo-section">
-			<img class="img-fluid logo" src="images/navbar/logo.png">
+			<a href="/home"><img class="img-fluid logo" src="images/navbar/logo.png"></a>
 			<p>فِلَسْطِينُ Wanderer - Discover the Heart of Palestine</p>
 		</div>
 		<div class="links-section">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 0px !important;">
-				<li class="nav-item"><a class="nav-link" aria-current="page" href="#" style="padding-right: 0px !important;"><i class="fas fa-archway icon"></i> Palestinian Heritage</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-binoculars icon"></i> Explore Culture</a></li>
+				<li class="nav-item"><a class="nav-link" aria-current="page" href="https://en.wikipedia.org/wiki/History_of_Palestine" style="padding-right: 0px !important;"><i class="fas fa-archway icon"></i> Palestinian Heritage</a></li>
+				<li class="nav-item"><a class="nav-link" href="#explore-culture"><i class="fas fa-binoculars icon"></i> Explore Culture</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-heart"></i> Your Picks</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
-				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
+				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
+				<li class="nav-item"><a class="nav-link" href="#our-journey"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
+				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
 				<li class="nav-item orng-button"><a class="nav-link" href="#" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
 			</ul>
 		</div>
@@ -108,7 +108,7 @@
 													capital of the Palestinian Authority.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -125,7 +125,7 @@
 													by its historical and cultural significance.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -142,7 +142,7 @@
 													importance and historical heritage.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -165,7 +165,7 @@
 													the region.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -183,7 +183,7 @@
 													Patriarchs/Ibrahimi Mosque.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -201,7 +201,7 @@
 													Nativity Church.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -224,7 +224,7 @@
 													sites.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -241,7 +241,7 @@
 													the separation barrier and its agricultural significance.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -259,7 +259,7 @@
 													Salfit.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn city-btn-color">Read More</a>
-													<a><i class="far fa-heart"></i></a>
+													<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -275,7 +275,7 @@
 	<!-- End of Cities Section -->
 
 	<!-- Act Section -->
-	<section class="pt-5 pb-5">
+	<section class="pt-5 pb-5" id="just-for-you">
 		<div class="container">
 			<div class="row">
 				<div class="col-6">
@@ -312,7 +312,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -330,7 +330,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -352,7 +352,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -375,7 +375,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -395,7 +395,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 
@@ -415,7 +415,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Book
 														now</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -432,7 +432,7 @@
 	<!-- End of Act Section-->
 
 	<!-- Culture Section -->
-	<section class="pt-5 pb-5">
+	<section class="pt-5 pb-5" id="explore-culture">
 		<div class="container">
 			<div class="row">
 				<div class="col-6">
@@ -467,7 +467,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 
@@ -486,7 +486,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -504,7 +504,7 @@
 												<div class="d-grid gap-2 card-btm">
 													<a href="#" class="btn btn-primary city-btn-color">Read
 														More</a>
-														<a><i class="far fa-heart"></i></a>
+														<a><i class="far fa-heart heart"></i></a>
 														
 												</div>
 											</div>
@@ -530,7 +530,7 @@
 			style="background-color: #FC8B5E;">
 			<div class="container p-4">
 				<div class="row mt-4">
-					<div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+					<div class="col-lg-4 col-md-12 mb-4 mb-md-0" id="our-journey">
 						<h5 class="text-uppercase mb-4">Our Journey</h5>
 						<p>We are a passionate group of young individuals committed to
 							making a positive impact on our country and sharing the beauty of
@@ -551,7 +551,7 @@
 								class="fab fa-google-plus-g"></i></a>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+					<div class="col-lg-4 col-md-6 mb-4 mb-md-0" id="get-in-touch">
 						<h5 class="text-uppercase mb-4 pb-1">Get in Touch</h5>
 						<div class="form-outline form-white mb-4">
 							<!-- Your contact form or input fields can go here -->
@@ -594,7 +594,7 @@
 			<div class="text-center p-3"
 				style="background-color: rgba(0, 0, 0, 0.2);">
 				© 2024 Copyright: <a class="text-black"
-					style="text-decoration: none; color: black;" href="#">PalWanderer.com</a>
+					style="text-decoration: none; color: black;" href="/home">PalWanderer.com</a>
 			</div>
 		</footer>
 	</div>

@@ -196,3 +196,14 @@ td {
 .card-btm:hover {
 	color:#fc8b5e;
 }
+.heart {
+	/* font-size: 24px; */
+    transition: color 0.3s;
+}
+.heart:hover i {
+	color:#fc8b5e;
+}
+
+table tbody, table td, table tfoot, table th, table thead, table tr {
+    border-color: black !important;
+}
