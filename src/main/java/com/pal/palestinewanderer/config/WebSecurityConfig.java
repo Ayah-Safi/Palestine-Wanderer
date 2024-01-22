@@ -30,10 +30,10 @@ public class WebSecurityConfig {
 	        .authorizeHttpRequests(auth -> auth
 	            .requestMatchers(new MvcRequestMatcher(introspector, "/admin/**"))
 	                .hasRole("ADMIN")
-	            .requestMatchers(new MvcRequestMatcher(introspector, "/home"), new MvcRequestMatcher(introspector, "/home/displayCity")) // Allow all access to home and displayCity
+	            .requestMatchers(new MvcRequestMatcher(introspector, "/home"), new MvcRequestMatcher(introspector, "/home/addFeedback"), new MvcRequestMatcher(introspector, "/home/displayCity")) // Allow all access to home and displayCity
 	                .permitAll()
 	            .requestMatchers(
-	                new MvcRequestMatcher(introspector, "/home/addFeedback"),
+//	                new MvcRequestMatcher(introspector, "/home/addFeedback"),
 	                new MvcRequestMatcher(introspector, "/home/addFav"),
 	                new MvcRequestMatcher(introspector, "/home/bookActivity"),
 	                new MvcRequestMatcher(introspector, "/home/feedbackThankYou"),
