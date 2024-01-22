@@ -51,7 +51,7 @@
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
-				<li class="nav-item orng-button"><a class="nav-link" href="#" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
+				<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -578,7 +578,7 @@
 									<td><a href="register">Registration</a></td>
 								</tr>
 								<tr>
-									<td>Login</td>
+									<td><a href="/login">Login</a></td>
 								</tr>
 								<tr>
 									<td><a href="/home/addFeedback">Add FeedBack</a></td>
