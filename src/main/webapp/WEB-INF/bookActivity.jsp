@@ -12,7 +12,7 @@
     <main>
         <div class="left-side"></div>
         <div class="right-side">
-            <form>
+            <form action="/home/activityThankYou">
                 <div class="btn-group"></div>
                 <h1><i class="fa fa-globe"></i> Event Booking</h1>
                 <div class="container">

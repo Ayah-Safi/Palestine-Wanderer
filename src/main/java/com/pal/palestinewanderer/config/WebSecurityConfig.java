@@ -36,8 +36,8 @@ public class WebSecurityConfig {
 //	                new MvcRequestMatcher(introspector, "/home/addFeedback"),
 	                new MvcRequestMatcher(introspector, "/home/addFav"),
 //	                new MvcRequestMatcher(introspector, "/home/bookActivity"),
-	                new MvcRequestMatcher(introspector, "/home/feedbackThankYou"),
-	                new MvcRequestMatcher(introspector, "/home/activityThankYou")
+	                new MvcRequestMatcher(introspector, "/home/feedbackThankYou")
+//	                new MvcRequestMatcher(introspector, "/home/activityThankYou")
 	            )
 	                .authenticated() // These endpoints require authentication
 	            .anyRequest()

@@ -105,6 +105,7 @@ public class UserController {
 
 	@GetMapping("/home/activityThankYou")
 	public String activityThankYou() {
+		
 		return "activityThankYou.jsp";
 	}
 

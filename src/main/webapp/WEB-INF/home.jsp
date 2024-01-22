@@ -310,7 +310,7 @@
 													intimate cultural exchange.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Book
+													<a href="#" class="btn btn-warning city-btn-color">Book
 														now</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -350,7 +350,7 @@
 													of the city at your leisure.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Book
+													<a href="#" class="btn btn-warning city-btn-color">Book
 														now</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -373,7 +373,7 @@
 													on this unique adventure.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Book
+													<a href="#" class="btn btn-warning city-btn-color">Book
 														now</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -393,7 +393,7 @@
 													of winding trails, breathtaking views, and the harmony of
 													the natural world on this immersive hiking journey.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Book
+													<a href="#" class="btn btn-warning city-btn-color">Book
 														now</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -413,7 +413,7 @@
 													appreciation for diverse customs and daily life in this
 													intimate cultural exchange</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Book
+													<a href="#" class="btn btn-warning city-btn-color">Book
 														now</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -465,7 +465,7 @@
 													ingredients to create dishes like falafel, hummus, and
 													maqluba, reflecting the region's diverse culinary heritage.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Read
+													<a href="#" class="btn btn-warning city-btn-color">Read
 														More</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -484,7 +484,7 @@
 													contemporary influences, capturing the essence of
 													resilience and identity.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Read
+													<a href="#" class="btn btn-warning city-btn-color">Read
 														More</a>
 														<a><i class="far fa-heart heart"></i></a>
 												</div>
@@ -502,7 +502,7 @@
 													symbolic patterns that convey a deep connection to
 													tradition and identity.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="#" class="btn btn-primary city-btn-color">Read
+													<a href="#" class="btn btn-warning city-btn-color">Read
 														More</a>
 														<a><i class="far fa-heart heart"></i></a>
 														
