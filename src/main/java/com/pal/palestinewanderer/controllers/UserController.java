@@ -16,7 +16,7 @@ import com.pal.palestinewanderer.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
-//imports removed for brevity
+
 @Controller
 public class UserController {
 
@@ -37,13 +37,18 @@ public class UserController {
 	}
 
 	@PostMapping("/register")
-	public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model,
-			HttpSession session) {
-		if (result.hasErrors()) {
-			return "registrationPage.jsp";
-		}
-		userService.saveWithUserRole(user);
-		return "redirect:/home";
+	public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model, HttpSession session) {
+	    if (result.hasErrors()) {
+	        return "registrationPage.jsp";
+	    }
+	    try {
+	        userService.saveWithUserRole(user);
+	        return "redirect:/home";
+	    } catch (Exception e) {
+	        // Handle the exception. You can log the error and/or add an error message to the model.
+	        model.addAttribute("errorMessage", e.getMessage());
+	        return "registrationPage.jsp"; // Redirect back to the registration page or an error page.
+	    }
 	}
 
 	@GetMapping("/login")

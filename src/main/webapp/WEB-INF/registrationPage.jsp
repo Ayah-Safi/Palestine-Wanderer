@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,49 +20,43 @@
 		<h1>
 			<i class="fas fa-users"></i> Registration
 		</h1>
-		<form action="">
-			<label for="text"><i class="fas fa-user"></i> First-Name:</label><br>
-			<input type="text" id="email" name="email"><br> <label
-				for="text"><i class="fas fa-user"></i> Last-Name:</label><br> <input
-				type="text" id="email" name="email"><br> <label
-				for="text"><i class="fas fa-envelope"></i> E-mail:</label><br>
-			<input type="text" id="email" name="email"><br> <label
-				for="password"><i class="fas fa-lock"></i> Password:</label><br>
-			<input type="password" id="email" name="email"><br> <label
-				for="password"><i class="fas fa-lock"></i> Confirm-Password:</label><br>
-			<input type="password" id="password" name="password"><br>
-			<button class="multi-color-button" type="submit">
-				<i class="fas fa-check" style="margin: 2px;"></i> Register
-			</button>
-			<div class="text-center">
-				<h4>
-					Not a member? <a href="#!">Login</a> 
-				</h4>
-			</div>
-		</form>
+	<form:form action="/register" method="post" modelAttribute="user">
+    <form:label for="fname" path="fname"><i class="fas fa-user"></i> First-Name:</form:label><br>
+    <form:errors path="fname" cssClass="error" />
+    <form:input type="text" path="fname" id="fname"/><br>
+    
+    <form:label for="lname" path="lname"><i class="fas fa-user"></i> Last-Name:</form:label><br>
+    <form:errors path="lname" cssClass="error" />
+    <form:input type="text" path="lname" id="lname"/><br>
+    
+    <form:label for="email" path="email"><i class="fas fa-envelope"></i> E-mail:</form:label><br>
+    <form:errors path="email" cssClass="error" />
+    <form:input type="text" path="email" id="email"/><br>
+    
+    <form:label path="password" for="password"><i class="fas fa-lock"></i> Password:</form:label><br>
+    <form:errors path="password" cssClass="error" />
+    <form:password path="password" id="password"/><br>
+    
+    <form:label for="passwordConfirmation" path="passwordConfirmation"><i class="fas fa-lock"></i> Confirm-Password:</form:label><br>
+    <form:errors path="passwordConfirmation" cssClass="error" />
+    <form:password path="passwordConfirmation" id="passwordConfirmation"/><br>
+    
+    <button class="multi-color-button" type="submit">
+        <i class="fas fa-check" style="margin: 2px;"></i> Register
+    </button>
+    
+    <div class="text-center">
+        <h4>
+            Not a member? <a href="#!">Login</a> 
+        </h4>
+    </div>
+	</form:form>
+	<c:if test="${not empty errorMessage}">
+    <div class="alert alert-danger">
+        ${errorMessage}
+    </div>
+	</c:if>
 	</div>
 	</main>
 </body>
 </html>
-<%-- 
-	<h1>Register!</h1>
-
-	<p>
-		<form:errors path="user.*" />
-	</p>
-
-	<form:form method="POST" action="/register" modelAttribute="user">
-		<p>
-			<form:label path="username">Username:</form:label>
-			<form:input path="username" />
-		</p>
-		<p>
-			<form:label path="password">Password:</form:label>
-			<form:password path="password" />
-		</p>
-		<p>
-			<form:label path="passwordConfirmation">Password Confirmation:</form:label>
-			<form:password path="passwordConfirmation" />
-		</p>
-		<input type="submit" value="Register!" />
-	</form:form> --%>

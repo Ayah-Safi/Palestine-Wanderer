@@ -171,3 +171,8 @@ h4,p{
     text-align: center;
     margin-top: 20px;
 }
+
+.error{
+	 color: red;
+    font-size: 14px;
+}
