@@ -48,7 +48,6 @@
 				<li class="nav-item"><a class="nav-link" aria-current="page" href="https://en.wikipedia.org/wiki/History_of_Palestine" style="padding-right: 0px !important;"><i class="fas fa-archway icon"></i> Palestinian Heritage</a></li>
 				<li class="nav-item"><a class="nav-link" href="#explore-culture"><i class="fas fa-binoculars icon"></i> Explore Culture</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-heart"></i> Your Picks</a></li>
-
 				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
 				<li class="nav-item"><a class="nav-link" href="#our-journey"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
 				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
