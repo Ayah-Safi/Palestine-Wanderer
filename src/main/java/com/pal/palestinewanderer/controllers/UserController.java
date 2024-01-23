@@ -1,5 +1,7 @@
 package com.pal.palestinewanderer.controllers;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,25 +12,29 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.pal.palestinewanderer.config.validator.UserValidator;
 import com.pal.palestinewanderer.models.User;
-import com.pal.palestinewanderer.services.CityService;
 import com.pal.palestinewanderer.services.UserService;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 
 @Controller
 public class UserController {
 
-	private UserService userService;
-	private UserValidator userValidator;
 	@Autowired
-    private CityService cityService;
+	private UserService userService;
+	@Autowired
+	private UserValidator userValidator;
+	
 
-	public UserController(UserService userService, UserValidator userValidator, CityService cityService) {
+
+	public UserController(UserService userService, UserValidator userValidator) {
 		this.userService = userService;
 		this.userValidator = userValidator;
-		this.cityService = cityService;
+
 	}
 
 	@GetMapping("/register")
@@ -43,7 +49,7 @@ public class UserController {
 	    }
 	    try {
 	        userService.saveWithUserRole(user);
-	        return "redirect:/home";
+	        return "redirect:/login";
 	    } catch (Exception e) {
 	        // Handle the exception. You can log the error and/or add an error message to the model.
 	        model.addAttribute("errorMessage", e.getMessage());
@@ -56,16 +62,25 @@ public class UserController {
 		return "loginPage.jsp";
 	}
 	
+	
 	@GetMapping("/admin")
 	public String admin() {
 		return "adminPage.jsp";
 	}
 	
-
-	@GetMapping("/home")
-	public String home() {
-		return "home.jsp";
-	}
+	  @GetMapping("/home")
+	    public String home(Model model) {
+	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	        String username = auth.getName(); // Get the username (or email) of the logged-in user
+	        System.out.print(username);
+	        
+	        User user = userService.findByUsername(username);
+	        if (user != null) {
+	            String firstName = user.getFname(); // Or whatever the method to get the first name is
+	            model.addAttribute("firstName", firstName);
+	        }
+	        return "home.jsp";
+	    }
 
 	@GetMapping("/home/addCity")
 	public String addCity() {
@@ -115,8 +130,8 @@ public class UserController {
 	}
 
 	@GetMapping("/home/displayCity")
-	public String displayCity(Model model) {
-        model.addAttribute("cities", cityService.getAllCities());
+	public String displayCity() {
+   
 		return "displayCity.jsp";
 	}
 
