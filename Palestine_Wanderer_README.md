@@ -98,4 +98,15 @@ Contributions are what make the open-source community such an amazing place to l
 
 <img width="1423" alt="image1" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/04805780-070b-4d34-ad88-11b16fcda998">
 
+<img width="1305" alt="Screenshot 2024-01-24 at 1 32 25 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/48adb920-5cc2-4681-aeb4-588fdc5741e2">
+
+<img width="946" alt="Screenshot 2024-01-24 at 1 32 35 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/52ac2deb-abdb-40b6-91e7-cd4c754eb0bc">
+
+<img width="1413" alt="Screenshot 2024-01-24 at 1 32 45 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/a5e5cb45-0e26-4454-9312-a5338003def7">
+
+<img width="1252" alt="Screenshot 2024-01-24 at 1 32 56 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/57d6a050-2dfc-456b-baba-637f08b831d3">
+
+<img width="1082" alt="Screenshot 2024-01-24 at 1 33 06 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/013615e8-da3f-4eb5-90de-8c062297b7d9">
+
+<img width="1091" alt="Screenshot 2024-01-24 at 1 33 17 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/75c610f4-992e-4a81-806c-e6d0e0bb39d2">
 
