@@ -98,8 +98,6 @@ Contributions are what make the open-source community such an amazing place to l
 
 <img width="1423" alt="image1" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/04805780-070b-4d34-ad88-11b16fcda998">
 
-<img width="1305" alt="Screenshot 2024-01-24 at 1 32 25 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/48adb920-5cc2-4681-aeb4-588fdc5741e2">
-
 <img width="946" alt="Screenshot 2024-01-24 at 1 32 35 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/52ac2deb-abdb-40b6-91e7-cd4c754eb0bc">
 
 <img width="1413" alt="Screenshot 2024-01-24 at 1 32 45 AM" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/a5e5cb45-0e26-4454-9312-a5338003def7">
