@@ -57,8 +57,13 @@
 
                 <!-- Submit Button -->
                 <button class="multi-color-button" type="submit"><i class="fa fa-paper-plane"></i>Submit</button>
+                
             </form>
+            <div class="back-section">
+        <a href="/home" id="back-button" ><img alt="key-icon" src="../images/displayCity/key.png" >Back to Palestine</a>
+    		</div>
         </div>
     </main>
+    
 </body>
 </html>

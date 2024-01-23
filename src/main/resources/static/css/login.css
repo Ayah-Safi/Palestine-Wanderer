@@ -167,3 +167,37 @@ h4,p{
     text-align: center;
     margin-top: 20px;
 }
+.back-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #fc8b5e;
+    border: 1px solid #fc8b5e;
+    border-radius: 20px;
+    padding: 4px;
+    margin: 20px;
+    margin-right: -127px;
+}
+
+.back-section a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
+    color: black;
+    height: 100%; 
+    gap: 10px; 
+}
+
+.back-section a:hover {
+    color: white;
+}
+
+.back-section img {
+    height: 36px;
+}
+
+#back-button {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
