@@ -29,32 +29,26 @@ public class Activity {
 	@Column(columnDefinition = "LONGTEXT")
 	private String descreption;
 
-	private BigDecimal price;
+	private String imageUrl;
 
 	// Default constructor
 	public Activity() {
 	}
 
 	// Parameterized constructor
-	public Activity(String name, String descreption, BigDecimal price) {
+	public Activity(String name, String descreption, String imageUrl) {
 		this.name = name;
 		this.descreption = descreption;
-		this.price = price;
+		this.imageUrl = imageUrl;
 	}
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "users_activities", 
-        joinColumns = @JoinColumn(name = "activity_id"), 
-        inverseJoinColumns = @JoinColumn(name = "user_id"))
-    private List<User> users;
-	
+	@JoinTable(name = "users_activities", joinColumns = @JoinColumn(name = "activity_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<User> users;
+
 	@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "users_activities", 
-        joinColumns = @JoinColumn(name = "activity_id"), 
-        inverseJoinColumns = @JoinColumn(name = "user_id"))
-    private List<User> usersList;
+	@JoinTable(name = "users_activities", joinColumns = @JoinColumn(name = "activity_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<User> usersList;
 
 	// Getters and setters
 	public Long getId() {
@@ -73,22 +67,29 @@ public class Activity {
 		this.name = name;
 	}
 
-	public String getDesc() {
+	public String getDescreption() {
 		return descreption;
 	}
 
-	public void setDesc(String descreption) {
+	public void setDescreption(String descreption) {
 		this.descreption = descreption;
 	}
 
-	public BigDecimal getPrice() {
-		return price;
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
+	public List<User> getUsersList() {
+		return usersList;
+	}
+
+	public void setUsersList(List<User> usersList) {
+		this.usersList = usersList;
+	}
 
 	public List<User> getUsers() {
 		return users;

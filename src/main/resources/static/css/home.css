@@ -228,3 +228,60 @@ text-decoration: none;
     justify-content: end;
     font-family: 'Rubik', sans-serif;
 }
+
+
+@keyframes flashing {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.flashing-username {
+  color: #fc8b5e; /* Desired text color */
+  animation: flashing 1s infinite; /* Apply the flashing animation */
+  font-weight:900;
+}
+
+.favorited {
+    color: red; /* or any color you prefer */
+}
+
+.back-section {
+	display:flex;
+	align-items: flex-end;
+	margin-right: 40px ;
+	background-color:#fc8b5e;
+	border: 1px solid #fc8b5e;
+	border-radius: 10px;
+	padding:4px;
+	
+}
+
+.back-section a  {
+	text-decoration:none;
+	color:black;
+
+}
+
+.back-section a   {
+	text-decoration:none;
+	color:black;
+
+}
+
+
+.back-section a span   {
+	text-decoration:none;
+	color:black;
+
+}
+
+.back-section a:hover{
+	color:white;
+	
+}
+
+.back-section img {
+	height: 36px;
+	
+	
+}

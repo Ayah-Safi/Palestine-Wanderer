@@ -10,17 +10,16 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.servlet.util.matcher.MvcRequestMatcher;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig{
-	
-
+public class WebSecurityConfig {
 
 	@Autowired
 	private UserDetailsService userDetailsService;
-
 
 	@Autowired
 	HandlerMappingIntrospector introspector;
@@ -29,14 +28,18 @@ public class WebSecurityConfig{
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	@Bean
+	
 
+	@Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(new MvcRequestMatcher(introspector, "/admin"))
                     .hasRole("ADMIN")
-                .requestMatchers(new MvcRequestMatcher(introspector, "/home"), new MvcRequestMatcher(introspector, "/home/addFeedback"), new MvcRequestMatcher(introspector, "/home/displayCity")) // Allow all access to home and displayCity
+                .requestMatchers(new MvcRequestMatcher(introspector, "/home"), 
+                		new MvcRequestMatcher(introspector, "/home/addFeedback"),
+                		new MvcRequestMatcher(introspector, "/home/displayCity"),
+                		new MvcRequestMatcher(introspector, "/user/addToFavorites")) // Allow all access to home and displayCity
                     .permitAll()
                 .requestMatchers(
 //                    new MvcRequestMatcher(introspector, "/home/addFeedback"),
@@ -67,10 +70,11 @@ public class WebSecurityConfig{
         return http.build();
 
 	}
-	
-	
+
 
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
+	
+	 
 }

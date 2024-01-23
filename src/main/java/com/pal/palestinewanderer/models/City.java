@@ -5,9 +5,13 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -26,13 +30,16 @@ public class City {
 
 	private String imageUrl;
 
-	
-
 	@OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
 	List<Village> villages;
 
 	@OneToMany(mappedBy = "city", cascade = CascadeType.ALL, orphanRemoval = true)
 	List<Camp> camps;
+	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "users_favourites", joinColumns = @JoinColumn(name = "favourite_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private List<User> users;
+
 
 	public City() {
 	}
@@ -88,6 +95,14 @@ public class City {
 
 	public void setCamps(List<Camp> camps) {
 		this.camps = camps;
+	}
+	
+	public List<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 
 }

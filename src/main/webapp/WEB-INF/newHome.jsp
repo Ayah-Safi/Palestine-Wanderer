@@ -8,8 +8,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!-- for rendering errors on PUT routes -->
 <%@ page isErrorPage="true"%>
-<%@ taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 
 
@@ -18,8 +17,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="_csrf" content="${_csrf.token}" />
-<meta name="_csrf_header" content="${_csrf.headerName}" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -46,43 +43,27 @@
 <body>
 	<nav class="navbar navbar-expand-lg  sticky-top">
 		<div class="logo-section">
-			<a href="/home"><img class="img-fluid logo"
-				src="images/navbar/logo.png"></a>
+			<a href="/home"><img class="img-fluid logo" src="images/navbar/logo.png"></a>
 			<p>فِلَسْطِينُ Wanderer - Discover the Heart of Palestine</p>
 		</div>
 		<div class="links-section">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0"
-				style="padding: 0px !important;">
-				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="https://en.wikipedia.org/wiki/History_of_Palestine"
-					style="padding-right: 0px !important;"><i
-						class="fas fa-archway icon"></i> Palestinian Heritage</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="#explore-culture"><i class="fas fa-binoculars icon"></i>
-						Explore Culture</a></li>
-				<li class="nav-item"><a class="nav-link" href="/home/yourPicks"><i
-						class="fas fa-heart"></i> Your Picks</a></li>
-				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i
-						class="fas fa-user-circle icon"></i> Just for You</a></li>
-				<li class="nav-item"><a class="nav-link" href="#our-journey"><i
-						class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
-				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i
-						class="fas fa-envelope icon"></i> Get in Touch</a></li>
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding: 0px !important;">
+				<li class="nav-item"><a class="nav-link" aria-current="page" href="https://en.wikipedia.org/wiki/History_of_Palestine" style="padding-right: 0px !important;"><i class="fas fa-archway icon"></i> Palestinian Heritage</a></li>
+				<li class="nav-item"><a class="nav-link" href="#explore-culture"><i class="fas fa-binoculars icon"></i> Explore Culture</a></li>
+				<li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-heart"></i> Your Picks</a></li>
+				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
+				<li class="nav-item"><a class="nav-link" href="#our-journey"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
+				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
 				<sec:authorize access="isAnonymous()">
-					<li class="nav-item orng-button"><a class="nav-link"
-						href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i>
-							Sign in</a></li>
+		    	<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
-					<li class="nav-item orng-button">
-						<form action="/logout" method="post">
-							<input type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-							<button type="submit" class="nav-link orng-button" id="sign-in">
-								<i class="fas fa-sign-out-alt icon"></i> Sign out
-							</button>
-						</form>
-					</li>
+			    <li class="nav-item orng-button">
+			        <form action="/logout" method="post">
+			            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			            <button type="submit" class="nav-link orng-button" id="sign-in"><i class="fas fa-sign-out-alt icon"></i> Sign out</button>
+			        </form>
+			    </li>
 				</sec:authorize>
 			</ul>
 		</div>
@@ -93,26 +74,25 @@
 		</video>
 	</div>
 	<div class="marquee">
-		<h3 class="welcm-msg">
-			<c:choose>
-				<c:when test="${not empty firstName}">
-                Welcome, <span class="flashing-username"><c:out
-							value="${firstName}" /></span> to Palestine 🇵🇸 – 
+    <h3 class="welcm-msg">
+        <c:choose>
+            <c:when test="${not empty firstName}">
+                Welcome, <span class="flashing-username"><c:out value="${firstName}" /></span> to Palestine 🇵🇸 – 
             </c:when>
-				<c:otherwise>
+            <c:otherwise>
                 Welcome to Palestine 🇵🇸 – 
             </c:otherwise>
-			</c:choose>
-			your journey into wonder begins here. <a class="play-vid" href="#"
-				onclick="playVideo();">Play the video</a> and start your adventure.
-		</h3>
-	</div>
-	<script>
-		function playVideo() {
-			var video = document.getElementById('vid');
-			video.play();
-		}
-	</script>
+        </c:choose>
+        your journey into wonder begins here. 
+        <a class="play-vid" href="#" onclick="playVideo();">Play the video</a> and start your adventure.
+    </h3>
+</div>
+<script>
+    function playVideo() {
+        var video = document.getElementById('vid');
+        video.play();
+    }
+</script>
 
 	<!-- Start of Cities Section -->
 	<section class="pt-5 pb-5 cities-crusol">
@@ -122,10 +102,10 @@
 					<h3 class="mb-3">Explore Palestinian Cities</h3>
 				</div>
 				<div class="col-6 text-right">
-					<a class="btn btn-warning mb-3 mr-1 orng-color"
+					<a class="btn btn-warning  mb-3 mr-1 orng-color"
 						href="#carouselExampleIndicators2" role="button"
 						data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-					</a> <a class="btn btn-warning mb-3 orng-color"
+					</a> <a class="btn btn-warning  mb-3 orng-color"
 						href="#carouselExampleIndicators2" role="button"
 						data-bs-slide="next"> <i class="fa fa-arrow-right"></i>
 					</a>
@@ -134,43 +114,186 @@
 					<div id="carouselExampleIndicators2" class="carousel slide"
 						data-bs-ride="carousel">
 						<div class="carousel-inner">
-							<c:forEach items="${cities}" var="city" varStatus="status">
-								<c:if test="${status.index % 3 == 0}">
-									<div
-										class="${status.first ? 'carousel-item active' : 'carousel-item'}">
-										<div class="row">
-								</c:if>
-								<div class="col-md-4 mb-3">
-									<div class="card">
-										<img class="img-fluid" alt="${city.name}"
-											src="${city.imageUrl}">
-										<div class="card-body">
-											<h4 class="card-title">${city.name}</h4>
-											<p class="card-text">${city.description}</p>
-											<div class="d-grid gap-2 card-btm">
-												<a href="/home/displayCity" class="btn city-btn-color">Read
-													More</a> <a href="/home/addFav/${city.id}"><i
-													class="far fa-heart heart"></i></a>
+							<!-- Carousel Item 1 -->
+							<div class="carousel-item active">
+								<div class="row">
+									<!-- Card 1 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/ramallah.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Ramallah</h4>
+												<p class="card-text">Ramallah is a Palestinian city in
+													the central West Bank, serving as the administrative
+													capital of the Palestinian Authority.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 2 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/nablus.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Nablus</h4>
+												<p class="card-text">Nablus, also known as Nablus, is a
+													Palestinian city in the northern West Bank, characterized
+													by its historical and cultural significance.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 3 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/jenin.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Jenin</h4>
+												<p class="card-text">Jenin is a Palestinian city in the
+													northern West Bank, recognized for its agricultural
+													importance and historical heritage.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<c:if test="${status.index % 3 == 2 || status.last}">
+							</div>
+							<!-- Carousel Item 2 -->
+							<div class="carousel-item">
+								<div class="row">
+									<!-- Card 4 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/tulkarem.jpeg">
+											<div class="card-body">
+												<h4 class="card-title">Tulkarem</h4>
+												<p class="card-text">Tulkarem is a Palestinian city
+													located in the northern West Bank, known for its
+													agricultural activities and as an essential urban center in
+													the region.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 5 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/hebron.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Hebron</h4>
+												<p class="card-text">Hebron is a major city in the
+													southern part of the West Bank, known for its religious
+													significance and the presence of the Tomb of the
+													Patriarchs/Ibrahimi Mosque.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 6 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/Bethlahem.jpeg">
+											<div class="card-body">
+												<h4 class="card-title">Bethlehem</h4>
+												<p class="card-text">Bethlehem is a Palestinian city in
+													the West Bank, renowned for its biblical significance as
+													the birthplace of Jesus Christ and for the historic
+													Nativity Church.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Carousel Item 3 -->
+							<div class="carousel-item">
+								<div class="row">
+									<!-- Card 7 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/Jericho.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Jericho</h4>
+												<p class="card-text">Jericho is a Palestinian city in
+													the West Bank, considered one of the oldest inhabited
+													cities in the world, and known for its archaeological
+													sites.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 8 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/qaleqelea.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Qalqilya</h4>
+												<p class="card-text">Qalqilya is a Palestinian city in
+													the West Bank, known for its distinctive location within
+													the separation barrier and its agricultural significance.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Card 9 -->
+									<div class="col-md-4 mb-3">
+										<div class="card">
+											<img class="img-fluid" alt="100%x280"
+												src="images/home/Salfit.jpg">
+											<div class="card-body">
+												<h4 class="card-title">Salfit</h4>
+												<p class="card-text">Salfit is a Palestinian city in the
+													central West Bank, notable for its agricultural activities
+													and proximity to historic sites like the ancient village of
+													Salfit.</p>
+												<div class="d-grid gap-2 card-btm">
+													<a href="/home/displayCity" class="btn city-btn-color">Read More</a>
+													<a><i class="far fa-heart heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<!-- Closing row -->
 					</div>
-					<!-- Closing carousel-item -->
-					</c:if>
-					</c:forEach>
 				</div>
-				<!-- Closing carousel-inner -->
 			</div>
-			<!-- Closing carousel -->
 		</div>
 	</section>
-
 	<!-- End of Cities Section -->
-
 
 	<!-- Act Section -->
 	<section class="pt-5 pb-5" id="just-for-you">
@@ -208,9 +331,9 @@
 													intimate cultural exchange.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -220,15 +343,15 @@
 											<img class="img-fluid" alt="100%x280"
 												src="images/home/resized_image_2.png">
 											<div class="card-body">
-												<h4 class="card-title">Plant an Olive Tree</h4>
+												<h4 class="card-title">Plant an olive tree</h4>
 												<p class="card-text">Planting an olive tree honors
 													tradition, fosters eco-sustainability, and connects us to
 													cultural significance. Embrace this practice to cultivate a
 													meaningful connection with nature and the past.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -245,9 +368,9 @@
 													of the city at your leisure.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -268,9 +391,9 @@
 													on this unique adventure.</p>
 
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -288,9 +411,9 @@
 													of winding trails, breathtaking views, and the harmony of
 													the natural world on this immersive hiking journey.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 
@@ -299,18 +422,18 @@
 									<div class="col-md-4 mb-3">
 										<div class="card">
 											<img class="img-fluid" alt="100%x280"
-												src="images/home/olive_resized.png">
+												src="images/home/resized_image_4.png">
 											<div class="card-body">
-												<h4 class="card-title">Join the Palestinian Olive
-													Picking Tradition</h4>
-												<p class="card-text">Join an immersive olive harvest in
-													Palestine, a blend of cultural tradition and community.
-													Experience the rich heritage and contribute to a meaningful
-													tradition, more than just an activity.</p>
+												<h4 class="card-title">Spend a Day Living with a
+													Palestinian Family</h4>
+												<p class="card-text">Immerse yourself in rich traditions
+													by spending a day with a Palestinian family. Enhance your
+													appreciation for diverse customs and daily life in this
+													intimate cultural exchange</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/bookActivity" class="btn btn-warning city-btn-color">Book
+														now</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -360,9 +483,9 @@
 													ingredients to create dishes like falafel, hummus, and
 													maqluba, reflecting the region's diverse culinary heritage.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/displayFood"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/displayFood" class="btn btn-warning city-btn-color">Read
+														More</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 
@@ -379,9 +502,9 @@
 													contemporary influences, capturing the essence of
 													resilience and identity.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/displaySong"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
+													<a href="/home/displaySong" class="btn btn-warning city-btn-color">Read
+														More</a>
+														<a><i class="far fa-heart heart"></i></a>
 												</div>
 											</div>
 										</div>
@@ -397,10 +520,10 @@
 													symbolic patterns that convey a deep connection to
 													tradition and identity.</p>
 												<div class="d-grid gap-2 card-btm">
-													<a href="/home/displayclothes"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
-
+													<a href="/home/displayclothes" class="btn btn-warning city-btn-color">Read
+														More</a>
+														<a><i class="far fa-heart heart"></i></a>
+														
 												</div>
 											</div>
 										</div>
@@ -427,13 +550,13 @@
 				<div class="row mt-4">
 					<div class="col-lg-4 col-md-12 mb-4 mb-md-0" id="our-journey">
 						<h5 class="text-uppercase mb-4">Our Journey</h5>
-						<p>Founded in 2024 in Ramallah City as a capstone project for a
-							Java stack course, we, Mohammed Yahya and Ayah Safi, embarked on
-							a heartfelt journey. As two driven youths with a profound love
-							for our homeland, we established this website with a vision to
-							serve and illuminate the intrinsic beauty and culture of
-							Palestine to the world.</p>
-						<p></p>
+						<p>We are a passionate group of young individuals committed to
+							making a positive impact on our country and sharing the beauty of
+							Palestine with the world in an engaging manner.</p>
+						<p>We were initially launched in 2019 in Nablus City, and
+							since then, we have been expanding our efforts and reach across
+							Palestine and beyond. Our mission is to showcase the rich culture
+							and heritage of Palestine through enjoyable means.</p>
 						<div class="mt-4">
 							<!-- Social media buttons -->
 							<a type="button" class="btn btn-floating btn-warning btn-lg"><i
@@ -461,8 +584,8 @@
 									class="fas fa-phone"></i></span><span class="ms-2">+ 02 294 567
 									88</span></li>
 							<li class="mb-3"><span class="fa-li"><i
-									class="fas fa-print"></i></span><span class="ms-2">+ 02 295 567
-									89</span></li>
+									class="fas fa-print"></i></span><span class="ms-2">+ 02 295
+									567 89</span></li>
 						</ul>
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
@@ -495,7 +618,6 @@
 	</div>
 	<!-- End of .container -->
 	<!-- End of Footer Section -->
-
 
 </body>
 </html>
