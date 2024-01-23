@@ -13,7 +13,7 @@ body {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: #f8f8f8 url("background-image.jpg") center / cover no-repeat; /* Use your background image here */
+    background: #fff4e6 url("background-image.jpg") center / cover no-repeat; /* Use your background image here */
     padding: 40px 20px;
     box-shadow: 5px 5px 10px 5px rgb(252, 210, 2);
 }
@@ -162,4 +162,41 @@ h1{
 .right-side form {
     margin-top: 30px; 
     margin-left: 20px;
+}
+.errors{
+color:red;
+}
+.back-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #fc8b5e;
+    border: 1px solid #fc8b5e;
+    border-radius: 20px;
+    padding: 4px;
+    margin: 30px;
+	margin-right: -93px;
+}
+
+.back-section a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
+    color: black;
+    height: 100%; 
+    gap: 10px; 
+}
+
+.back-section a:hover {
+    color: white;
+}
+
+.back-section img {
+    height: 36px;
+}
+
+#back-button {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }

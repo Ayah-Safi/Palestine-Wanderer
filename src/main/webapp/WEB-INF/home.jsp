@@ -220,7 +220,7 @@
 											<img class="img-fluid" alt="100%x280"
 												src="images/home/resized_image_2.png">
 											<div class="card-body">
-												<h4 class="card-title">Plant an olive tree</h4>
+												<h4 class="card-title">Plant an Olive Tree</h4>
 												<p class="card-text">Planting an olive tree honors
 													tradition, fosters eco-sustainability, and connects us to
 													cultural significance. Embrace this practice to cultivate a

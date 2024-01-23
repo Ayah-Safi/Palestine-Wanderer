@@ -9,6 +9,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "feedback")
@@ -20,7 +22,12 @@ public class Feedback {
 	private Long id;
 
 	@Column(columnDefinition = "LONGTEXT")
+	@Size(min = 2, max = 200, message = "the author  should be at lest 2 character ")
 	private String description;
+	@Email(message = "Email should be valid")
+	@Column(nullable = false, unique = true)
+	@Size(min = 5, max = 200, message = "the author  should be at lest 5 character ")
+	private String email;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
@@ -59,6 +66,22 @@ public class Feedback {
 
 	public void setdescription(String description) {
 		this.description = description;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 

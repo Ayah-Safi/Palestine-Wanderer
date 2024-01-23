@@ -2,8 +2,10 @@ package com.pal.palestinewanderer.controllers;
 
 
 
+
 import java.security.Principal;
 import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -22,6 +24,10 @@ import com.pal.palestinewanderer.config.validator.UserValidator;
 import com.pal.palestinewanderer.models.City;
 import com.pal.palestinewanderer.models.User;
 import com.pal.palestinewanderer.services.CityService;
+import com.pal.palestinewanderer.models.Feedback;
+import com.pal.palestinewanderer.models.User;
+import com.pal.palestinewanderer.repositories.FeedbackRepository;
+import com.pal.palestinewanderer.services.FeedbackService;
 import com.pal.palestinewanderer.services.UserService;
 
 import jakarta.servlet.http.HttpSession;
@@ -35,11 +41,25 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	private UserValidator userValidator;
+
 	
 	@Autowired
     private CityService cityService;
 	
 
+
+	@Autowired
+	FeedbackRepository feedbackRepository;
+
+	@Autowired
+	private FeedbackService feedbackService;
+
+	public UserController(FeedbackService feedbackService) {
+		this.feedbackService = feedbackService;
+	}
+
+	public UserController() {
+	}
 
 	public UserController(UserService userService, UserValidator userValidator, CityService cityService) {
 		this.userService = userService;
@@ -74,26 +94,27 @@ public class UserController {
 	public String login() {
 		return "loginPage.jsp";
 	}
-	
-	
+
 	@GetMapping("/admin")
 	public String admin() {
 		return "adminPage.jsp";
 	}
-	
 
 	@GetMapping("/home/displayFood")
 	public String displayFood() {
 		return "displayFood.jsp";
 	}
+
 	@GetMapping("/home/displaySong")
 	public String displaySong() {
 		return "displaySong.jsp";
 	}
+
 	@GetMapping("/home/displayclothes")
 	public String displayclothes() {
 		return "displayclothes.jsp";
 	}
+
 	
 	@GetMapping("/home")
     public String home(Model model) {
@@ -162,6 +183,21 @@ public class UserController {
 	}
 
 
+	@GetMapping("/home")
+	public String home(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		System.out.print(username);
+
+
+		User user = userService.findByUsername(username);
+		if (user != null) {
+			String firstName = user.getFname();
+			model.addAttribute("firstName", firstName);
+		}
+		return "home.jsp";
+	}
+
 	@GetMapping("/home/yourPicks")
 	public String dispalyPicks() {
 		return "yourPicks.jsp";
@@ -194,10 +230,34 @@ public class UserController {
 	}
 
 	@GetMapping("/home/addFeedback")
-	public String addFeedback() {
+	public String addFeedback(Model model) {
+		model.addAttribute("newFeedBack", new Feedback());
 		return "addFeedback.jsp";
 	}
-	
+
+
+	@PostMapping("/home/addFeedback")
+	public String addFeedback(@Valid @ModelAttribute("newFeedBack") Feedback feedback, BindingResult result) {
+
+		if (result.hasErrors()) {
+
+			return "addFeedback.jsp";
+		}
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		System.out.print(username);
+		User user = userService.findByUsername(username);
+
+		if (user != null) {
+			Long userId = user.getId();
+		}
+
+		feedback.setUserFeed(user);
+		feedbackService.createfeedback(feedback, user);
+		return "redirect:/home/feedbackThankYou";
+	}
+
 
 	@GetMapping("/home/feedbackThankYou")
 	public String feedbackThankYou() {
@@ -206,13 +266,13 @@ public class UserController {
 
 	@GetMapping("/home/activityThankYou")
 	public String activityThankYou() {
-		
+
 		return "activityThankYou.jsp";
 	}
 
 	@GetMapping("/home/displayCity")
 	public String displayCity() {
-   
+
 		return "displayCity.jsp";
 	}
 

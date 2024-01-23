@@ -42,7 +42,7 @@
 			<a href="/home"><img alt="key-icon" src="../images/displayCity/key.png">Back to Palestine</a>
 		</div>
 	</nav>
-<h1  class="nablus" style="text-align: center;">Nublus City</h1>
+<h1  class="nablus" style="text-align: center;">Nablus City</h1>
 <div class="container mt-2">
 	<div class="row justify-content-center">
 		<div class="col-12 col-md-6">
