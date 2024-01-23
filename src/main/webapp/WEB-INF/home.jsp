@@ -8,6 +8,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!-- for rendering errors on PUT routes -->
 <%@ page isErrorPage="true"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 
 
 <!DOCTYPE html>
@@ -52,8 +54,22 @@
 				<li class="nav-item"><a class="nav-link" href="#just-for-you"><i class="fas fa-user-circle icon"></i> Just for You</a></li>
 				<li class="nav-item"><a class="nav-link" href="#our-journey"><i class="fas fa-map-marked-alt icon"></i> Our Journey</a></li>
 				<li class="nav-item"><a class="nav-link" href="#get-in-touch"><i class="fas fa-envelope icon"></i> Get in Touch</a></li>
-				<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
+<!-- 				<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
+ -->			<sec:authorize access="isAnonymous()">
+		    	<li class="nav-item orng-button"><a class="nav-link" href="/login" id="sign-in"><i class="fas fa-sign-in-alt icon"></i> Sign in</a></li>
+				</sec:authorize>
+				<sec:authorize access="isAuthenticated()">
+			    <li class="nav-item orng-button">
+			        <form action="/logout" method="post">
+			            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			            <button type="submit" class="nav-link orng-button" id="sign-in"><i class="fas fa-sign-out-alt icon"></i> Sign out</button>
+			        </form>
+			    </li>
+				</sec:authorize>
 			</ul>
+			<c:if test="${not empty firstName}">
+    			<p class="wlcm-msg">Welcome, <c:out value="${firstName}"></c:out></p>
+			</c:if>
 		</div>
 	</nav>
 	<div class="video-container">
