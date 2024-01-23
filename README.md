@@ -36,6 +36,7 @@ Interact with content creators, fostering a community of shared insights and exp
 
 Technical Stack
 Frontend: HTML, CSS, JavaScript
+
 Backend: Java with Spring Boot
 IDE: Spring Tool Suite (STS)
 Database: MySQL Workbench
@@ -46,23 +47,21 @@ This project is primarily for learning purposes. The functionalities introduced 
 How to Use
 Clone the repository:
 
-sh
-Copy code
+
 git clone [repository link]
 Navigate to the project directory:
 
-sh
-Copy code
+
+
 cd Palestine-Wanderer
 Install dependencies:
 
-sh
-Copy code
+
+
 [Instructions based on the project setup]
 Run the application:
 
-sh
-Copy code
+
 [Instructions based on the project setup]
 Access the application:
 Open your preferred web browser and visit http://localhost:[port]/
