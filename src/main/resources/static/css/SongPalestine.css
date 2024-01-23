@@ -1,0 +1,116 @@
+body {
+	background-color:#fff4eb;
+}
+
+
+
+.card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.card-img-top {
+	height: 180px; 
+	object-fit: cover;
+	width: 100%; 
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1; 
+}
+
+.card-text {
+	flex-grow: 1; 
+}
+
+.card-title {
+	min-height: 48px;
+}
+
+.btn-primary {
+	margin-top: auto;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	background-color: #F6F6F6;
+    padding: 10px;
+    box-shadow: 0 8px 12px rgba(255, 255, 0, 0.2); 
+}
+
+.logo-section {
+	display: flex;
+	align-items: flex-start;
+	
+}
+
+.logo-section p {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: larger;
+	align-self: center;
+	margin: 0px;
+}
+
+.logo-section img.logo {
+	height:70px;
+	max-width: 70px;
+}
+
+.back-section {
+	display:flex;
+	align-items: flex-end;
+	margin-right: 40px ;
+	background-color:#fc8b5e;
+	border: 1px solid #fc8b5e;
+	border-radius: 10px;
+	padding:4px;
+	
+}
+
+.back-section a {
+	text-decoration:none;
+	color:black;
+}
+
+.back-section a:hover{
+	color:white;
+	
+}
+
+.back-section img {
+	height: 36px;
+	
+	
+}
+
+
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: space-between !important;
+}
+
+.orng-color {
+	background-color: #fc8b5e;
+	border: 1px solid #fc8b5e;
+	color: white;
+}
+
+.city-btn-color {
+	background-color: #fc8b5e;
+	border: 1px solid #fc8b5e;
+	color: white;
+}
+.img-fluid {
+    max-width: 118%;
+    height: 250px;
+}
+audio{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    background-color: #fc8b5e;
+    
+}

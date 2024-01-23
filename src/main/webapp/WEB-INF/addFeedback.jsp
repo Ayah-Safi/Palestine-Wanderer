@@ -14,7 +14,7 @@
         <div class="left-side"></div>
         <div class="right-side">
             <h1><i class="fas fa-comments"></i> FeedBack</h1>
-            <form action="">
+            <form action="/home/feedbackThankYou">
                 <label for="email"><i class="fas fa-envelope"></i> E-mail:</label><br>
                 <input type="email" id="email" name="email"><br>
                 <label for="message"><i class="fas fa-pencil-alt"></i> Your FeedBack:</label><br>

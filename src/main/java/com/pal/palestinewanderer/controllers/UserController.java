@@ -66,6 +66,18 @@ public class UserController {
 	public String home() {
 		return "home.jsp";
 	}
+	@GetMapping("/home/displayFood")
+	public String displayFood() {
+		return "displayFood.jsp";
+	}
+	@GetMapping("/home/displaySong")
+	public String displaySong() {
+		return "displaySong.jsp";
+	}
+	@GetMapping("/home/displayclothes")
+	public String displayclothes() {
+		return "displayclothes.jsp";
+	}
 
 	@GetMapping("/home/addCity")
 	public String addCity() {

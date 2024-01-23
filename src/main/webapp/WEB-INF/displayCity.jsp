@@ -95,10 +95,10 @@
 				<h3 class="mb-3">Famous villages in Nablus</h3>
 			</div>
 			<div class="col-6 text-right">
-				<a class="btn btn-primary mb-3 mr-1 orng-color"
+				<a class="btn btn-warning mb-3 mr-1 orng-color"
 					href="#carouselExampleIndicators2" role="button"
 					data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-				</a> <a class="btn btn-primary mb-3 orng-color" href="#carouselExampleIndicators2"
+				</a> <a class="btn btn-warning mb-3 orng-color" href="#carouselExampleIndicators2"
 					role="button" data-bs-slide="next"> <i
 					class="fa fa-arrow-right"></i>
 				</a>
@@ -127,7 +127,7 @@
 												inhabitants in 1987 post the 1967 Zionist occupation.</p>
 											<div class="d-grid gap-2">
 
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 
 											</div>
 										</div>
@@ -147,7 +147,7 @@
 												Burin, Asira al-Qibliya, Awarta, Einabus, Jama'in, and
 												Aurata.</p>
 											<div class="d-grid gap-2">
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 											</div>
 										</div>
 									</div>
@@ -164,7 +164,7 @@
 												meters, offering views of Ajloun mountains, Rabd Castle, and
 												Mount Sheikh, bordered by Yassid</p>
 											<div class="d-grid gap-2">
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 											</div>
 										</div>
 									</div>
@@ -187,10 +187,10 @@
 				<h3 class="mb-3">Famous camps in Nablus</h3>
 			</div>
 			<div class="col-6 text-right">
-				<a class="btn btn-primary mb-3 mr-1 orng-color"
+				<a class="btn btn-warning mb-3 mr-1 orng-color"
 					href="#carouselExampleIndicators2" role="button"
 					data-bs-slide="prev"> <i class="fa fa-arrow-left"></i>
-				</a> <a class="btn btn-primary mb-3 orng-color" href="#carouselExampleIndicators2"
+				</a> <a class="btn btn-warning mb-3 orng-color" href="#carouselExampleIndicators2"
 					role="button" data-bs-slide="next"> <i
 					class="fa fa-arrow-right"></i>
 				</a>
@@ -217,7 +217,7 @@
 												providing essential services to meet their basic needs</p>
 											<div class="d-grid gap-2">
 
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 
 											</div>
 										</div>
@@ -235,7 +235,7 @@
 												and care to Palestinian refugees, creating a living
 												environment that facilitates adaptation.</p>
 											<div class="d-grid gap-2">
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 											</div>
 										</div>
 									</div>
@@ -250,7 +250,7 @@
 												secure residents' needs and improve their living conditions.
 											</p>
 											<div class="d-grid gap-2">
-												<a href="#" class="btn btn-primary city-btn-color">Read More</a>
+												<a href="#" class="btn btn-warning city-btn-color">Read More</a>
 											</div>
 										</div>
 									</div>
