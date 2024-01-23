@@ -68,6 +68,20 @@ public class UserController {
 		return "adminPage.jsp";
 	}
 	
+
+	@GetMapping("/home/displayFood")
+	public String displayFood() {
+		return "displayFood.jsp";
+	}
+	@GetMapping("/home/displaySong")
+	public String displaySong() {
+		return "displaySong.jsp";
+	}
+	@GetMapping("/home/displayclothes")
+	public String displayclothes() {
+		return "displayclothes.jsp";
+	}
+
 	  @GetMapping("/home")
 	    public String home(Model model) {
 	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -81,6 +95,7 @@ public class UserController {
 	        }
 	        return "home.jsp";
 	    }
+
 
 	@GetMapping("/home/addCity")
 	public String addCity() {

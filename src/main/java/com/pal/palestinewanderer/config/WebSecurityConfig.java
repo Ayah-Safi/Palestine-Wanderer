@@ -30,6 +30,7 @@ public class WebSecurityConfig{
 		return new BCryptPasswordEncoder();
 	}
 	@Bean
+
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
@@ -61,6 +62,7 @@ public class WebSecurityConfig{
                     .clearAuthentication(true)  // Clear authentication
                     .permitAll()
                 );
+
 
         return http.build();
 
