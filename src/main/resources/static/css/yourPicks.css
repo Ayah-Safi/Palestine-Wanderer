@@ -1,0 +1,71 @@
+body {
+	margin: 0; /* Resets default margin */
+	height: 100vh; /* Full height of the viewport */
+	display: flex; /* Enables flexbox */
+	justify-content: center; /* Centers children horizontally */
+	align-items: center;
+	background-image: url("../images/yourPicks/full.png");
+	/* Centers children vertically */
+	flex-direction:column;
+}
+
+.main {
+	font-family: 'Rubik', sans-serif;
+	display: flex;
+	flex-direction: column; /* Stacks children vertically */
+	align-items: center; /* Centers children horizontally */
+	justify-content: flex-start;
+	/* Aligns children to the start of the container vertically */
+	height: 70%; /* Adjust as per requirement */
+	width: 85%; /* Adjust as per requirement */
+	background: #fff4e6;
+	box-shadow: 5px 5px 10px 5px rgb(252, 210, 2);
+	padding: 40px 20px;
+}
+
+h1 {
+	margin: 0px;
+	padding: 0px;
+}
+
+input {
+	background-color: #fc8b5e;
+	border: 1px solid #fc8b5e;
+	border-radius: 7%;
+	padding: 2px;
+	color: white;
+}
+
+.back-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fc8b5e;
+	border: 1px solid #fc8b5e;
+	border-radius: 10px;
+	padding: 4px;
+	margin: 30px;
+}
+
+.back-section a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: black;
+	height: 100%;
+	gap: 10px;
+}
+
+.back-section a:hover {
+	color: white;
+}
+
+.back-section img {
+	height: 36px;
+}
+
+#back-button {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}

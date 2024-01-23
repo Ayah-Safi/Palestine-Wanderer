@@ -10,12 +10,20 @@ import com.pal.palestinewanderer.repositories.CityRepository;
 
 @Service
 public class CityService {
-	
-    @Autowired
-    private CityRepository cityRepository;
 
-    public List<City> getAllCities() {
-        return cityRepository.findAll();
-    }
+	@Autowired
+	private CityRepository cityRepository;
+
+	public List<City> findAllCities() {
+		return cityRepository.findAll();
+	}
+
+	public City findById(Long cityId) {
+		return cityRepository.findById(cityId).get();
+	}
+	
+	public City saveCity(City city) {
+		return cityRepository.save(city);
+	}
 
 }

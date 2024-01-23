@@ -1,5 +1,6 @@
 package com.pal.palestinewanderer.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -63,10 +64,23 @@ public class User {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "users_activities", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "activity_id"))
 	private List<Activity> bookedActivities;
-	
-	public User() {
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "users_favourites", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "favourite_id"))
+	private List<City> favoriteCities;
+
+	public void addCityToFavorites(City city) {
+		if (favoriteCities == null) {
+			favoriteCities = new ArrayList<>();
+		}
+		if (!favoriteCities.contains(city)) {
+			favoriteCities.add(city);
+		}
+
 	}
 
+	public User() {
+	}
 
 	public List<Activity> getActivities() {
 		return activities;
@@ -84,7 +98,6 @@ public class User {
 		this.feedback = feedback;
 	}
 
-	
 	public Long getId() {
 		return id;
 	}
@@ -92,6 +105,7 @@ public class User {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getFname() {
 		return fname;
 	}
@@ -116,7 +130,6 @@ public class User {
 		this.email = email;
 	}
 
-	
 	public String getPassword() {
 		return password;
 	}
@@ -156,13 +169,21 @@ public class User {
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
-	
+
 	public List<Activity> getBookedActivities() {
 		return bookedActivities;
 	}
 
 	public void setBookedActivities(List<Activity> bookedActivities) {
 		this.bookedActivities = bookedActivities;
+	}
+
+	public List<City> getFavoriteCities() {
+		return favoriteCities;
+	}
+
+	public void setFavoriteCities(List<City> favoriteCities) {
+		this.favoriteCities = favoriteCities;
 	}
 
 	@PrePersist

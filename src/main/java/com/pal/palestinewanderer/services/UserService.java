@@ -10,8 +10,6 @@ import com.pal.palestinewanderer.models.User;
 import com.pal.palestinewanderer.repositories.RoleRepository;
 import com.pal.palestinewanderer.repositories.UserRepository;
 
-
-
 @Service
 public class UserService {
 	private UserRepository userRepository;
@@ -70,5 +68,9 @@ public class UserService {
 	// 3
 	public User findByUsername(String email) {
 		return userRepository.findByEmail(email);
+	}
+
+	public User saveUser(User user) {
+		return userRepository.save(user);
 	}
 }
