@@ -183,20 +183,20 @@ public class UserController {
 	}
 
 
-	@GetMapping("/home")
-	public String home(Model model) {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String username = auth.getName();
-		System.out.print(username);
-
-
-		User user = userService.findByUsername(username);
-		if (user != null) {
-			String firstName = user.getFname();
-			model.addAttribute("firstName", firstName);
-		}
-		return "home.jsp";
-	}
+//	@GetMapping("/home")
+//	public String home(Model model) {
+//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//		String username = auth.getName();
+//		System.out.print(username);
+//
+//
+//		User user = userService.findByUsername(username);
+//		if (user != null) {
+//			String firstName = user.getFname();
+//			model.addAttribute("firstName", firstName);
+//		}
+//		return "home.jsp";
+//	}
 
 	@GetMapping("/home/yourPicks")
 	public String dispalyPicks() {
