@@ -44,10 +44,13 @@
     <button class="multi-color-button" type="submit">
         <i class="fas fa-check" style="margin: 2px;"></i> Register
     </button>
+    <div class="back-section">
+        <a href="/home" id="back-button" ><img alt="key-icon" src="../images/displayCity/key.png" >Back to Palestine</a>
+    </div>
     
     <div class="text-center">
         <h4>
-            Not a member? <a href="#!">Login</a> 
+            Not a member? <a href="/login">Login</a> 
         </h4>
     </div>
 	</form:form>

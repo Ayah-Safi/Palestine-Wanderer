@@ -1,8 +1,8 @@
 package com.pal.palestinewanderer.controllers;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,15 +11,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.pal.palestinewanderer.config.validator.UserValidator;
+import com.pal.palestinewanderer.models.Feedback;
 import com.pal.palestinewanderer.models.User;
+import com.pal.palestinewanderer.repositories.FeedbackRepository;
+import com.pal.palestinewanderer.services.FeedbackService;
 import com.pal.palestinewanderer.services.UserService;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-
 
 @Controller
 public class UserController {
@@ -28,8 +27,19 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	private UserValidator userValidator;
-	
 
+	@Autowired
+	FeedbackRepository feedbackRepository;
+
+	@Autowired
+	private FeedbackService feedbackService;
+
+	public UserController(FeedbackService feedbackService) {
+		this.feedbackService = feedbackService;
+	}
+
+	public UserController() {
+	}
 
 	public UserController(UserService userService, UserValidator userValidator) {
 		this.userService = userService;
@@ -43,59 +53,60 @@ public class UserController {
 	}
 
 	@PostMapping("/register")
-	public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model, HttpSession session) {
-	    if (result.hasErrors()) {
-	        return "registrationPage.jsp";
-	    }
-	    try {
-	        userService.saveWithUserRole(user);
-	        return "redirect:/login";
-	    } catch (Exception e) {
-	        // Handle the exception. You can log the error and/or add an error message to the model.
-	        model.addAttribute("errorMessage", e.getMessage());
-	        return "registrationPage.jsp"; // Redirect back to the registration page or an error page.
-	    }
+	public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model,
+			HttpSession session) {
+		if (result.hasErrors()) {
+			return "registrationPage.jsp";
+		}
+		try {
+			userService.saveWithUserRole(user);
+			return "redirect:/login";
+		} catch (Exception e) {
+			// Handle the exception. You can log the error and/or add an error message to
+			// the model.
+			model.addAttribute("errorMessage", e.getMessage());
+			return "registrationPage.jsp"; // Redirect back to the registration page or an error page.
+		}
 	}
 
 	@GetMapping("/login")
 	public String login() {
 		return "loginPage.jsp";
 	}
-	
-	
+
 	@GetMapping("/admin")
 	public String admin() {
 		return "adminPage.jsp";
 	}
-	
 
 	@GetMapping("/home/displayFood")
 	public String displayFood() {
 		return "displayFood.jsp";
 	}
+
 	@GetMapping("/home/displaySong")
 	public String displaySong() {
 		return "displaySong.jsp";
 	}
+
 	@GetMapping("/home/displayclothes")
 	public String displayclothes() {
 		return "displayclothes.jsp";
 	}
 
-	  @GetMapping("/home")
-	    public String home(Model model) {
-	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	        String username = auth.getName(); // Get the username (or email) of the logged-in user
-	        System.out.print(username);
-	        
-	        User user = userService.findByUsername(username);
-	        if (user != null) {
-	            String firstName = user.getFname(); // Or whatever the method to get the first name is
-	            model.addAttribute("firstName", firstName);
-	        }
-	        return "home.jsp";
-	    }
+	@GetMapping("/home")
+	public String home(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		System.out.print(username);
 
+		User user = userService.findByUsername(username);
+		if (user != null) {
+			String firstName = user.getFname();
+			model.addAttribute("firstName", firstName);
+		}
+		return "home.jsp";
+	}
 
 	@GetMapping("/home/addCity")
 	public String addCity() {
@@ -123,15 +134,32 @@ public class UserController {
 	}
 
 	@GetMapping("/home/addFeedback")
-	public String addFeedback() {
+	public String addFeedback(Model model) {
+		model.addAttribute("newFeedBack", new Feedback());
 		return "addFeedback.jsp";
 	}
-	
-	@GetMapping("/home/addFav")
-	public String addFav() {
-		return "";
+
+	@PostMapping("/home/addFeedback")
+	public String addFeedback(@Valid @ModelAttribute("newFeedBack") Feedback feedback, BindingResult result) {
+
+		if (result.hasErrors()) {
+
+			return "addFeedback.jsp";
+		}
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		System.out.print(username);
+		User user = userService.findByUsername(username);
+
+		if (user != null) {
+			Long userId = user.getId();
+		}
+
+		feedback.setUserFeed(user);
+		feedbackService.createfeedback(feedback, user);
+		return "redirect:/home/feedbackThankYou";
 	}
-	
 
 	@GetMapping("/home/feedbackThankYou")
 	public String feedbackThankYou() {
@@ -140,13 +168,13 @@ public class UserController {
 
 	@GetMapping("/home/activityThankYou")
 	public String activityThankYou() {
-		
+
 		return "activityThankYou.jsp";
 	}
 
 	@GetMapping("/home/displayCity")
 	public String displayCity() {
-   
+
 		return "displayCity.jsp";
 	}
 
