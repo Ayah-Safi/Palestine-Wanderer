@@ -86,11 +86,10 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
+
 
 ## Contact
-- Project Link: [https://github.com/your_username/your_project](https://github.com/your_username/your_project)
+- Project Link: https://github.com/Ayah-Safi/Palestine-Wanderer
 
 ---
 **Note:** This project is for learning purposes and may not cover all aspects of security and performance. Always ensure best practices in production environments.
