@@ -93,3 +93,9 @@ Contributions are what make the open-source community such an amazing place to l
 
 ---
 **Note:** This project is for learning purposes and may not cover all aspects of security and performance. Always ensure best practices in production environments.
+
+
+
+<img width="1423" alt="image1" src="https://github.com/Ayah-Safi/Palestine-Wanderer/assets/147770015/04805780-070b-4d34-ad88-11b16fcda998">
+
+
