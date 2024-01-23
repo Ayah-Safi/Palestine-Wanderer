@@ -15,6 +15,7 @@ import com.pal.palestinewanderer.models.User;
 import com.pal.palestinewanderer.repositories.UserRepository;
 @Service
 public class UserDetailsServiceImplementation implements UserDetailsService {
+	
     private UserRepository userRepository;
     
     public UserDetailsServiceImplementation(UserRepository userRepository){
@@ -22,15 +23,16 @@ public class UserDetailsServiceImplementation implements UserDetailsService {
     }
     // 1
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByFname(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        User user = userRepository.findByEmail(email);
         
         if(user == null) {
-            throw new UsernameNotFoundException("User not found");
+            throw new UsernameNotFoundException("User not found with email: " + email);
         }
         
-        return new org.springframework.security.core.userdetails.User(user.getFname(), user.getPassword(), getAuthorities(user));
+        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), getAuthorities(user));
     }
+    
     
     // 2
     private List<GrantedAuthority> getAuthorities(User user){
