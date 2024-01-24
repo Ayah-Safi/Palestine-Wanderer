@@ -209,8 +209,8 @@
 
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -227,8 +227,8 @@
 													meaningful connection with nature and the past.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a> <!-- <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -246,8 +246,8 @@
 
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -269,8 +269,8 @@
 
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -289,8 +289,8 @@
 													the natural world on this immersive hiking journey.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 
@@ -309,8 +309,8 @@
 													tradition, more than just an activity.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/bookActivity"
-														class="btn btn-warning city-btn-color">Book now</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Book now</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -361,8 +361,8 @@
 													maqluba, reflecting the region's diverse culinary heritage.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/displayFood"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Read More</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 
@@ -380,8 +380,8 @@
 													resilience and identity.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/displaySong"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Read More</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 												</div>
 											</div>
 										</div>
@@ -398,8 +398,8 @@
 													tradition and identity.</p>
 												<div class="d-grid gap-2 card-btm">
 													<a href="/home/displayclothes"
-														class="btn btn-warning city-btn-color">Read More</a> <a><i
-														class="far fa-heart heart"></i></a>
+														class="btn btn-warning city-btn-color">Read More</a><!--  <a><i
+														class="far fa-heart heart"></i></a> -->
 
 												</div>
 											</div>

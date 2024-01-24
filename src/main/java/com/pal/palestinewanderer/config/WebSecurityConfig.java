@@ -31,50 +31,57 @@ public class WebSecurityConfig {
 	
 
 	@Bean
-    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(new MvcRequestMatcher(introspector, "/admin"))
-                    .hasRole("ADMIN")
-                .requestMatchers(new MvcRequestMatcher(introspector, "/home"), 
-                		new MvcRequestMatcher(introspector, "/home/addFeedback"),
-                		new MvcRequestMatcher(introspector, "/home/displayCity"),
-                		new MvcRequestMatcher(introspector, "/user/addToFavorites")) // Allow all access to home and displayCity
-                    .permitAll()
-                .requestMatchers(
-//                    new MvcRequestMatcher(introspector, "/home/addFeedback"),
-                    new MvcRequestMatcher(introspector, "/home/addFav")
-//                    new MvcRequestMatcher(introspector, "/home/bookActivity"),
-//                    new MvcRequestMatcher(introspector, "/home/feedbackThankYou")
-//                    new MvcRequestMatcher(introspector, "/home/activityThankYou")
-                )
-                    .authenticated() // These endpoints require authentication
-                .anyRequest()
-                    .permitAll()
-            )
-            .formLogin(form -> form
-                .loginPage("/login")
-                .defaultSuccessUrl("/home")
-                .permitAll()
-            )
-            .logout(logout -> logout
-                    .logoutUrl("/logout")  // URL to trigger logout
-                    .logoutSuccessUrl("/home")  // URL to redirect after logout
-                    .deleteCookies("JSESSIONID")  // Delete the JSESSIONID cookie
-                    .invalidateHttpSession(true)  // Invalidate session
-                    .clearAuthentication(true)  // Clear authentication
-                    .permitAll()
-                );
+	protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+	    http
+	        .authorizeHttpRequests(auth -> auth
+	            // Allow both authenticated and non-authenticated users to access the home, login, and register pages
+	            .requestMatchers(
+	                new MvcRequestMatcher(introspector, "/home"),
+	                new MvcRequestMatcher(introspector, "/login"),
+	                new MvcRequestMatcher(introspector, "/register"),
+	                new MvcRequestMatcher(introspector, "/home/displayCities")
+	            )
+	                .permitAll()
+	            // Restrict access to these admin-specific endpoints to only users with the ADMIN role
+	            .requestMatchers(
+	                new MvcRequestMatcher(introspector, "/home/addCity"),
+	                new MvcRequestMatcher(introspector, "/home/addVillage"),
+	                new MvcRequestMatcher(introspector, "/home/addCamp"),
+	                new MvcRequestMatcher(introspector, "/home/addActivity"),
+	                new MvcRequestMatcher(introspector, "/admin") // Assuming /admin is your admin page URL
+	            )
+	                .hasRole("ADMIN")
+	            // Restrict access to these endpoints to only authenticated users
+	            .requestMatchers(new MvcRequestMatcher(introspector, "/home/*")) // Matches all endpoints starting with /home/
+	                .authenticated()
+	            // Restrict access to the /home/removeFav/{cityId} and /home/addFav/{cityId} endpoints to only authenticated users
+	            .requestMatchers(
+	                new MvcRequestMatcher(introspector, "/home/removeFav/{cityId}"),
+	                new MvcRequestMatcher(introspector, "/home/addFav/{cityId}")
+	            )
+	                .authenticated()
+	            // Any other request
+	            .anyRequest()
+	                .permitAll()
+	        )
+	        .formLogin(form -> form
+	            .loginPage("/login")
+	            .defaultSuccessUrl("/home")
+	            .permitAll()
+	        )
+	        .logout(logout -> logout
+	            .logoutUrl("/logout")  // URL to trigger logout
+	            .logoutSuccessUrl("/home")  // URL to redirect after logout
+	            .deleteCookies("JSESSIONID")  // Delete the JSESSIONID cookie
+	            .invalidateHttpSession(true)  // Invalidate session
+	            .clearAuthentication(true)  // Clear authentication
+	            .permitAll()
+	        );
 
-
-        return http.build();
-
+	    return http.build();
 	}
-
 
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+	    auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
-	
-	 
 }

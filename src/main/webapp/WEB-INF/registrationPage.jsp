@@ -50,7 +50,7 @@
     
     <div class="text-center">
         <h4>
-            Not a member? <a href="/login">Login</a> 
+            Already have an account? <a href="/login">Login</a> 
         </h4>
     </div>
 	</form:form>

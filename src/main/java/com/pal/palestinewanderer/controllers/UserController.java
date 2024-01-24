@@ -1,11 +1,7 @@
 package com.pal.palestinewanderer.controllers;
 
-
-
-
 import java.security.Principal;
 import java.util.List;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -33,7 +29,6 @@ import com.pal.palestinewanderer.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
-
 @Controller
 public class UserController {
 
@@ -42,11 +37,8 @@ public class UserController {
 	@Autowired
 	private UserValidator userValidator;
 
-	
 	@Autowired
-    private CityService cityService;
-	
-
+	private CityService cityService;
 
 	@Autowired
 	FeedbackRepository feedbackRepository;
@@ -115,95 +107,78 @@ public class UserController {
 		return "displayclothes.jsp";
 	}
 
-	
 	@GetMapping("/home")
-    public String home(Model model) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String username = auth.getName(); 
-        
-        User user = userService.findByUsername(username);
-        if (user != null) {
-            String firstName = user.getFname();
-            model.addAttribute("firstName", firstName);
-        }
+	public String home(Model model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
 
-        List<City> cities = cityService.findAllCities();
-        model.addAttribute("cities", cities);
+		User user = userService.findByUsername(username);
+		if (user != null) {
+			String firstName = user.getFname();
+			model.addAttribute("firstName", firstName);
+		}
 
-        return "home.jsp";
-    }
+		List<City> cities = cityService.findAllCities();
+		model.addAttribute("cities", cities);
+
+		return "home.jsp";
+	}
 
 	@GetMapping("/home/addFav/{cityId}")
 	public ModelAndView addFav(@PathVariable("cityId") Long cityId, Principal principal) {
-	    ModelAndView modelAndView = new ModelAndView("yourPicks.jsp");
-	    
-	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	    String username = auth.getName(); 
-	    User user = userService.findByUsername(username);
-	    
-	    if (user != null) {
-	        City city = cityService.findById(cityId);
-	        
-	        if (city != null && !user.getFavoriteCities().contains(city)) {
-	            user.addCityToFavorites(city);
-	            userService.saveUser(user);
-	        }
-	        
-	        // Fetch and add the list of favorite cities to the ModelAndView
-	        List<City> favoriteCities = user.getFavoriteCities();
-	        modelAndView.addObject("favoriteCities", favoriteCities);
-	    } else {
-	        // Handle case where user is not found
-	        modelAndView.addObject("error", "User not found");
-	    }
-	    
-	    return modelAndView;
+		ModelAndView modelAndView = new ModelAndView("yourPicks.jsp");
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		User user = userService.findByUsername(username);
+
+		if (user != null) {
+			City city = cityService.findById(cityId);
+
+			if (city != null && !user.getFavoriteCities().contains(city)) {
+				user.addCityToFavorites(city);
+				userService.saveUser(user);
+			}
+
+			// Fetch and add the list of favorite cities to the ModelAndView
+			List<City> favoriteCities = user.getFavoriteCities();
+			modelAndView.addObject("favoriteCities", favoriteCities);
+		} else {
+			// Handle case where user is not found
+			modelAndView.addObject("error", "User not found");
+		}
+
+		return modelAndView;
 	}
-	
+
 	@PostMapping("/home/removeFav/{cityId}")
-	public String removeFav(@PathVariable("cityId") Long cityId, Principal principal, RedirectAttributes redirectAttributes) {
-	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-	    String username = auth.getName(); 
-	    User user = userService.findByUsername(username);
+	public String removeFav(@PathVariable("cityId") Long cityId, Principal principal,
+			RedirectAttributes redirectAttributes) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String username = auth.getName();
+		User user = userService.findByUsername(username);
 
-	    if (user != null) {
-	        City city = cityService.findById(cityId);
+		if (user != null) {
+			City city = cityService.findById(cityId);
 
-	        if (city != null && user.getFavoriteCities().contains(city)) {
-	            user.getFavoriteCities().remove(city);
-	            userService.saveUser(user);
-	        }
-	        // Fetch the updated list of favorite cities
-	        List<City> favoriteCities = user.getFavoriteCities();
-	        // Add favoriteCities as a flash attribute
-	        redirectAttributes.addFlashAttribute("favoriteCities", favoriteCities);
-	    }
-	    
-	    return "redirect:/home/yourPicks";
+			if (city != null && user.getFavoriteCities().contains(city)) {
+				user.getFavoriteCities().remove(city);
+				userService.saveUser(user);
+			}
+			// Fetch the updated list of favorite cities
+			List<City> favoriteCities = user.getFavoriteCities();
+			// Add favoriteCities as a flash attribute
+			redirectAttributes.addFlashAttribute("favoriteCities", favoriteCities);
+		}
+
+		return "redirect:/home/yourPicks";
 	}
-
-
-//	@GetMapping("/home")
-//	public String home(Model model) {
-//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-//		String username = auth.getName();
-//		System.out.print(username);
-//
-//
-//		User user = userService.findByUsername(username);
-//		if (user != null) {
-//			String firstName = user.getFname();
-//			model.addAttribute("firstName", firstName);
-//		}
-//		return "home.jsp";
-//	}
 
 	@GetMapping("/home/yourPicks")
 	public String dispalyPicks() {
 		return "yourPicks.jsp";
 	}
-	
-	
+
 	@GetMapping("/home/addCity")
 	public String addCity() {
 		return "addCity.jsp";
@@ -224,6 +199,13 @@ public class UserController {
 		return "addActivity.jsp";
 	}
 
+	@GetMapping("/home/displayCities")
+	public String displayCities(Model model) {
+		List<City> cities = cityService.findAllCities();
+		model.addAttribute("cities", cities);
+		return "adminPage.jsp";
+	}
+
 	@GetMapping("/home/bookActivity")
 	public String bookActivity() {
 		return "bookActivity.jsp";
@@ -234,7 +216,6 @@ public class UserController {
 		model.addAttribute("newFeedBack", new Feedback());
 		return "addFeedback.jsp";
 	}
-
 
 	@PostMapping("/home/addFeedback")
 	public String addFeedback(@Valid @ModelAttribute("newFeedBack") Feedback feedback, BindingResult result) {
@@ -258,6 +239,12 @@ public class UserController {
 		return "redirect:/home/feedbackThankYou";
 	}
 
+	@GetMapping("/home/feedback")
+	public String showFeedback(Model model) {
+		List<Feedback> feedbackList = feedbackService.findAllFeed();
+		model.addAttribute("feedbacks", feedbackList);
+		return "adminPage.jsp"; // Return the view name (e.g., feedback.html under the admin directory)
+	}
 
 	@GetMapping("/home/feedbackThankYou")
 	public String feedbackThankYou() {
